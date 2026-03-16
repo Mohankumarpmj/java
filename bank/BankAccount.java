@@ -1,15 +1,14 @@
-package BankAccount;
-import cutomer.*;
+package bank;
 public class BankAccount{
     private String accountHolder;
     private double balance;
 
-   BankAccount( String accountHolder,double balance){
+   public BankAccount( String accountHolder,double balance){
     this.accountHolder=accountHolder;
     this.balance=balance;
     
    }
-   void showAccountInfo(){
+   public void showAccountInfo(){
     System.out.println("The Account Detaile' ");
     System.out.println("---------------------");
     System.out.println("The Name of accountHolder:" + accountHolder);

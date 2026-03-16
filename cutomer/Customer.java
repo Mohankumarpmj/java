@@ -1,17 +1,24 @@
 package Customer;
-import bank.*;
+import bank.BankAccount;
 public class Customer{
     private String customerName;
-    private int customerAccount;
-    private BankAccount account;
-Customer(String customerName,int customerAccount){
+    private BankAccount customerAccount;
+Customer(String customerName,BankAccount customerAccount){
     
     this.customerName=customerName;
-    this.custmerAccount=custmerAccount;
+    this.customerAccount=custmerAccount;
 }
 
-public void Transactions(){
-    deposit();
-    withdraw();
-}
+public void performTransactions(double depositAmount, double withdrawAmount) {
+
+        System.out.println("\nCustomer : " + customerName);
+
+        customerAccount.deposit(depositAmount);
+        customerAccount.withdraw(withdrawAmount);
+    }
+
+    public void displayDetails() {
+        System.out.println("\nCustomer Name : " + customerName);
+        customerAccount.showAccountInfo();
+    }
 }
